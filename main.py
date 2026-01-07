@@ -6,9 +6,9 @@ def main():
     print("*** Processamento de Dados Contábeis ***")
     
     files = [
-        'lancamentos_11.csv'
-    #    'lancamentos_106.csv',
-    #    'lancamentos_109.csv'
+        'lancamentos_11.csv',
+        'lancamentos_106.csv',
+        'lancamentos_109.csv'
     ]
     
     #Cabeçalho padrão
@@ -36,12 +36,13 @@ def main():
         else:
             print(f"Arquivo não encontrado: {file_path}")
 
-    #Geração Arquivo CSV - Output
     print("*" * 40)
-    
+
+    #Geração Arquivo CSV - Output
     if all_data:
         df = pd.DataFrame(all_data)
         
+        #Garantir ordem das colunas
         if set(columns).issubset(df.columns):
             df = df[columns]
         
@@ -56,7 +57,7 @@ def main():
         print(f"ARQUIVO FINAL GERADO: {output_name}")
         print(f"Total acumulado de linhas: {len(df)}")
     else:
-        print("Nenhum dado foi gerado no total.")
+        print("Nenhum dado foi gerado.")
 
     print("\nProcessamento finalizado.")
 

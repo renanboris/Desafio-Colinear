@@ -13,6 +13,7 @@ def clean_text(text):
     text = re.sub(r'[^a-z0-9\s]', '', text)
 
     stopwords = {'de', 'do', 'da', 'dos', 'das', 'em', 'na', 'no', 'com', 'para', 'pelo', 'pela'}
+
     palavras = [p for p in text.split() if p not in stopwords]
     
     return " ".join(palavras)
