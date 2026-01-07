@@ -67,8 +67,9 @@ def process_accounting_file(file_path):
                 if header_found and i_data is not None and len(row) > i_data and re.match(r'\d{2}/\d{2}/\d{4}', row[i_data]):
                     
                     if not account_code_current: 
+                        print(f"Aviso: Linha de dados ignorada (sem conta pai definida): {row}")
                         continue
-
+    
                     raw_history = row[i_hist]
                     v_debit = row[i_deb].strip()
                     v_credit = row[i_cred].strip()
