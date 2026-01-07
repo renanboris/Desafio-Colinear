@@ -1,3 +1,28 @@
+# --- Python ---
 __pycache__/
+*.py[cod]
+*$py.class
+
+# --- Ambientes Virtuais (CRUCIAL) ---
 .venv/
+venv/
+env/
+ENV/
+
+# --- Banco de Dados (Não comitar dados reais/locais) ---
+*.db
+*.sqlite3
+*.sqlite
+
+# --- IDEs e Editores ---
 .vscode/
+.idea/
+*.swp
+
+# --- Arquivos de Sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Logs e Variáveis de Ambiente ---
+*.log
+.env
